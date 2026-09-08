@@ -15,3 +15,4 @@
 - JavaScript `node --check`: 전체 통과
 - CSS `tinycss2` 파싱 오류: 0
 - HTML 인라인 `style=`: 0개
+
