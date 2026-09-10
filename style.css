@@ -2627,3 +2627,37 @@ body.theme-dark .eq-split-layout .map-filter-btn.active {
     color: #f4f4f5;
     box-shadow: 0 5px 14px rgba(0,0,0,.45), 0 0 10px rgba(255,255,255,.04);
 }
+
+/* =========================================================
+   THEME REFINEMENT PASS v10
+   기본 딥 다크 테마의 주간/실전 YouTube 배너는
+   Hover 상태가 아니라 기본 상태부터 퍼플 그라데이션으로 표시
+   ========================================================= */
+body.theme-default .weekly-yt-banner-btn {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    border-color: rgba(196, 181, 253, 0.75);
+    color: #ffffff;
+    box-shadow: 0 5px 16px rgba(99, 102, 241, 0.30);
+}
+
+body.theme-default .weekly-yt-banner-btn:hover {
+    background: linear-gradient(135deg, #7253ed 0%, #a06cff 100%);
+    border-color: #ddd6fe;
+    box-shadow: 0 7px 20px rgba(139, 92, 246, 0.42);
+}
+
+body.theme-default .weekly-yt-banner-btn .yt-banner-sub {
+    color: #ddd6fe;
+}
+
+body.theme-default .weekly-yt-banner-btn .yt-banner-arrow {
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+body.theme-default .weekly-yt-banner-btn:hover .yt-banner-arrow {
+    background: #c4b5fd;
+    color: #171329;
+    border-color: #ddd6fe;
+}
