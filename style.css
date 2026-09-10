@@ -1028,29 +1028,28 @@ body {
     gap: 12px;
 }
 
-/* 📺 대형 단독 유튜브 공략 검색 배너 버튼 ( 남발 없이 깔끔하게 고정) */
+/* 📺 유튜브 실전 공략 배너 — 기본 다크 테마에서는 메인 액센트 퍼플 */
 .weekly-yt-banner-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 14px;
     width: 100%;
-    /* 평소 기본 상태: 화사한 라벤더 보라색 그라데이션 */
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    border: 1.5px solid rgba(196, 181, 253, 0.8);
+    background: linear-gradient(135deg, #6440e9 0%, #7c3aed 100%);
+    border: 1.5px solid #9b82ff;
     padding: 12px 18px;
     border-radius: 12px;
     text-decoration: none;
-    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
-    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35);
+    transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    box-shadow: 0 5px 16px rgba(100, 64, 233, 0.28);
     box-sizing: border-box;
 }
 
-/* 마우스를 올렸을 때(Hover): 부드럽게 살짝 더 밝아지는 효과 */
+/* 기본 다크 테마 Hover — 같은 보라 계열에서 살짝만 밝아짐 */
 .weekly-yt-banner-btn:hover {
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-    border-color: #ffffff;
-    box-shadow: 0 6px 22px rgba(139, 92, 246, 0.5);
+    background: linear-gradient(135deg, #7253ed 0%, #8b5cf6 100%);
+    border-color: #c4b5fd;
+    box-shadow: 0 7px 20px rgba(100, 64, 233, 0.38);
     transform: translateY(-2px);
 }
 
@@ -2104,7 +2103,7 @@ body.theme-light .dict-content-body {
     color: #1e293b;
 }
 
-body.theme-light .weekly-detail-card *,
+body.theme-light .weekly-detail-card,
 body.theme-light .guide-card *,
 body.theme-light .dict-details * {
     color: #1e293b;
@@ -2121,11 +2120,11 @@ body.theme-light .eq-tier-title {
 /* ☀️ [화이트 모드 전용] 장비 상세 가이드 박스 배경 및 테두리 강제 백색화     */
 /* ========================================================================= */
 body.theme-light .weekly-detail-card,
-body.theme-light .weekly-detail-card *,
+body.theme-light .weekly-detail-card,
 body.theme-light .eq-tier-box,
-body.theme-light .eq-tier-box *,
+body.theme-light .eq-tier-box,
 body.theme-light .dict-content-body,
-body.theme-light .dict-content-body *,
+body.theme-light .dict-content-body,
 body.theme-light .dict-spec-bar,
 body.theme-light .dict-spec-bar * {
     background-color: #ffffff;
@@ -2580,4 +2579,51 @@ body.theme-dark .news-accordion-item:hover {
     border-color: #52525b;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.50),
                 0 0 12px rgba(255, 255, 255, 0.04);
+}
+
+
+/* =========================================================
+   THEME REFINEMENT PASS v8
+   라이트/매트 블랙에서 텍스트 뒤에 생기는 강제 배경과
+   링크/활성 버튼의 잔여 보라색을 테마에 맞게 정리
+   ========================================================= */
+
+/* 🤍 LIGHT — 활성 메뉴도 전체 화이트 UI와 어울리는 중성 톤 */
+body.theme-light {
+    --nav-active-background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+    --nav-active-shadow: 0 5px 14px rgba(15, 23, 42, 0.10), inset 0 1px 0 rgba(255,255,255,.85);
+}
+
+body.theme-light .nav-tab.active {
+    background: var(--nav-active-background);
+    color: #1e293b;
+    box-shadow: var(--nav-active-shadow);
+}
+
+/* 라이트 모드 링크/배너의 기본 그림자도 중성 톤으로 통일 */
+body.theme-light .ghost-yt-banner-btn,
+body.theme-light .weekly-yt-banner-btn {
+    box-shadow: 0 5px 16px rgba(15, 23, 42, 0.08);
+}
+
+/* 🖤 MATTE BLACK — 링크의 기본 그림자는 차콜/실버 계열 */
+body.theme-dark .ghost-yt-banner-btn,
+body.theme-dark .weekly-yt-banner-btn {
+    box-shadow: 0 6px 18px rgba(0,0,0,.55),
+                0 0 12px rgba(255,255,255,.035);
+}
+
+/* 매트 블랙 활성 메뉴/필터도 보라색 대신 차콜 */
+body.theme-dark .nav-tab.active {
+    background: linear-gradient(135deg, #3f3f46, #27272a);
+    color: #f4f4f5;
+    box-shadow: 0 6px 18px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+body.theme-dark .map-split-layout .map-filter-btn.active,
+body.theme-dark .eq-split-layout .map-filter-btn.active {
+    background-color: #27272a;
+    border-color: #52525b;
+    color: #f4f4f5;
+    box-shadow: 0 5px 14px rgba(0,0,0,.45), 0 0 10px rgba(255,255,255,.04);
 }
