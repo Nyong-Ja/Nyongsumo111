@@ -65,19 +65,35 @@ function renderFactory() {
                     📺 실전 공략 영상 시청
                 </div>
 
-                <a href="https://www.youtube.com" target="_blank" style="display: flex; align-items: center; gap: 12px; background: rgba(255, 0, 0, 0.1); border: 1.5px solid rgba(255, 0, 0, 0.3); padding: 16px; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">
-                    <div style="background: #ff0000; color: #fff; width: 44px; height: 44px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
-                        ▶
-                    </div>
-                    <div>
-                        <div style="font-weight: 600; color: var(--text-primary); font-size: 0.98rem; margin-bottom: 3px;">
-                            유튜브에서 '레벨업 공장' 실전 공략 보기
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="https://youtu.be/jN_0MlvYjRA" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 12px; background: rgba(255, 0, 0, 0.1); border: 1.5px solid rgba(255, 0, 0, 0.3); padding: 16px; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">
+                        <div style="background: #ff0000; color: #fff; width: 44px; height: 44px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                            ▶
                         </div>
-                        <div style="font-size: 0.85rem; color: var(--text-secondary);">
-                            클릭 시 뇽자의 고속 레벨업 파밍 실전 공략 영상으로 이동합니다.
+                        <div>
+                            <div style="font-weight: 600; color: var(--text-primary); font-size: 0.98rem; margin-bottom: 3px;">
+                                🏆 모든 공장맵 티어표 & 공략
+                            </div>
+                            <div style="font-size: 0.85rem; color: var(--text-secondary);">
+                                1분당 경험치 2,700까지! 공장맵 세팅과 티어를 한눈에 확인하세요.
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+
+                    <a href="https://youtu.be/8XDH6niXRIw" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 12px; background: rgba(255, 0, 0, 0.1); border: 1.5px solid rgba(255, 0, 0, 0.3); padding: 16px; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">
+                        <div style="background: #ff0000; color: #fff; width: 44px; height: 44px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+                            ▶
+                        </div>
+                        <div>
+                            <div style="font-weight: 600; color: var(--text-primary); font-size: 0.98rem; margin-bottom: 3px;">
+                                🗼 등대맵 신규 공장 공략
+                            </div>
+                            <div style="font-size: 0.85rem; color: var(--text-secondary);">
+                                2분당 경험치 2,700! 새로 나온 등대맵에서 레벨업하는 방법을 확인하세요.
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
 
             <div class="weekly-detail-card" style="background: var(--card-bg); border: 1.5px solid var(--card-border); border-radius: 12px; padding: 20px;">
