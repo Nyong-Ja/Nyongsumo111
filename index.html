@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뇽스모 - 파스모포비아 전문 정보 & 공략</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="theme-default">
+
+    <div class="main-container">
+
+        <!-- =====================================================
+             상단 헤더
+             ===================================================== -->
+        <header class="title-section">
+
+            <div class="title-left">
+
+                <div
+                    class="logo-title-wrapper is-clickable"
+                    onclick="switchTab('evidence'); document.getElementById('reset-btn').click();"
+                >
+                    <img
+                        src="images/logo/logo.png"
+                        alt="뇽스모 로고"
+                        class="site-logo"
+                    >
+                </div>
+
+                <div
+                    class="sub-title header-subtitle"
+                >
+                    파스모포비아 한국 전용 공략 정보 사이트.
+                    완벽한 유령 조사를 위한 필수 데이터와 팁을 빠르게 찾아보세요.
+                </div>
+
+            </div>
+
+<!-- 우측 제어 영역 (테마 선택 + 검색창) -->
+            <div class="title-right-controls">
+
+                <!-- 🎨 테마 색상 변경 메뉴 -->
+                <div class="theme-selector-box">
+                    <span class="theme-label">🎨 테마:</span>
+                    <select id="theme-select" onchange="changeTheme(this.value)" class="theme-dropdown">
+                        <option value="default">💜 딥 다크 (디폴트)</option>
+                        <option value="light">🤍 라이트 (화이트)</option>
+                        <option value="dark">🖤 매트 블랙</option>
+                    </select>
+                </div>
+
+                <!-- 🔍 아래로 이동한 검색창 -->
+                <div class="top-search-bar">
+                    <input
+                        type="text"
+                        placeholder="🔍 유령/증거/특징 빠른 검색..."
+                        onfocus="openSearchPanel()"
+                        onkeyup="handleHeaderSearch(this.value)"
+                    >
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             네비게이션
+             ===================================================== -->
+        <nav class="top-nav">
+
+            <button
+                class="nav-tab active"
+                data-tab="evidence"
+                onclick="switchTab('evidence')"
+            >
+                🔍 증거 분석
+            </button>
+
+            <button
+                class="nav-tab"
+                data-tab="ghosts"
+                onclick="switchTab('ghosts')"
+            >
+                📖 유령 도감
+            </button>
+
+            <button
+                class="nav-tab"
+                data-tab="equipment"
+                onclick="switchTab('equipment')"
+            >
+                🛠️ 장비 가이드
+            </button>
+
+            <button
+                class="nav-tab"
+                data-tab="maps"
+                onclick="switchTab('maps')"
+            >
+                🗺️ 맵 정보
+            </button>
+
+            <button
+                class="nav-tab"
+                data-tab="weekly"
+                onclick="switchTab('weekly')"
+            >
+                🎯 주간 도전 과제
+            </button>
+
+            <button
+                class="nav-tab"
+                data-tab="apocalypse"
+                onclick="switchTab('apocalypse')"
+            >
+                💀 아포칼립스
+            </button>
+
+            <button
+                class="nav-tab"
+                data-tab="factory"
+                onclick="switchTab('factory')"
+            >
+                🏭 레벨업 공장 공략
+            </button>
+
+            <button
+                class="nav-tab"
+                data-tab="drops"
+                onclick="switchTab('drops')"
+            >
+                🎁 드롭스
+            </button>
+
+            <button
+                class="nav-tab"
+                data-tab="guide"
+                onclick="switchTab('guide')"
+            >
+                🔥 핵심 공략
+            </button>
+
+            <button
+                class="nav-tab"
+                data-tab="idcard"
+                onclick="switchTab('idcard')"
+            >
+                🪪 ID 카드 & 배지
+            </button>
+
+            <button
+                class="nav-tab"
+                data-tab="news"
+                onclick="switchTab('news')"
+            >
+                📢 패치 소식
+            </button>
+
+        </nav>
+
+
+        <!-- =====================================================
+             메인 컨텐츠
+             ===================================================== -->
+        <main class="site-main">
+
+
+            <!-- =================================================
+                 탭 1 : 증거 분석
+                 ================================================= -->
+            <section
+                id="tab-evidence"
+                class="tab-content active"
+            >
+
+                <!-- 메인 히어로 / 빠른 탐색 -->
+                <section class="nyongja-hero" aria-label="뇽스모 메인 안내">
+                    <div class="hero-glow hero-glow-one"></div>
+                    <div class="hero-glow hero-glow-two"></div>
+                    <div class="hero-copy">
+                        <div class="hero-kicker"><span></span> PHASMOPHOBIA FIELD GUIDE</div>
+                        <h1>뇽스모 <em>Ghost Investigation Hub</em></h1>
+                        <p>파스모포비아의 유령, 증거, 장비와 공략을 한곳에서 빠르게 확인하세요.</p>
+                        <div class="hero-actions">
+                            <button class="hero-primary" onclick="switchTab('ghosts')">📖 유령 도감 바로가기</button>
+                            <button class="hero-secondary" onclick="switchTab('guide')">🔥 핵심 공략 보기</button>
+                        </div>
+                    </div>
+                    <div class="hero-mark" aria-hidden="true">
+                        <div class="hero-ring hero-ring-back"></div>
+                        <div class="hero-ring hero-ring-front"></div>
+                        <img src="images/logo/logo.png" alt="" class="hero-logo">
+                    </div>
+                    <div class="hero-stats">
+                        <div><strong>GHOSTS</strong><span>유령 도감</span></div>
+                        <div><strong>EVIDENCE</strong><span>증거 분석</span></div>
+                        <div><strong>GUIDES</strong><span>핵심 공략</span></div>
+                    </div>
+                </section>
+
+                <div class="content-wrapper">
+
+                    <!-- 증거 선택 -->
+                    <div class="left-panel">
+
+                        <div class="panel-header">
+
+                            <div class="panel-title-group">
+
+                                <h2>
+                                    증거 선택 (Evidence)
+                                </h2>
+
+                                <p class="guide-text">
+                                    *
+                                    <span class="badge state-include">
+                                        1번 클릭: 포함
+                                    </span>
+                                    |
+                                    <span class="badge state-exclude">
+                                        2번 클릭: 제외
+                                    </span>
+                                    |
+                                    3번 클릭: 미선택
+                                </p>
+
+                            </div>
+
+                            <button id="reset-btn">
+                                🔄 선택 초기화
+                            </button>
+
+                        </div>
+
+
+                        <div class="evidence-grid">
+
+                            <button
+                                class="evidence-btn"
+                                data-evidence="EMF 5"
+                            >
+                                EMF 5
+                            </button>
+
+                            <button
+                                class="evidence-btn"
+                                data-evidence="도트"
+                            >
+                                도트
+                            </button>
+
+                            <button
+                                class="evidence-btn"
+                                data-evidence="UV 라이트"
+                            >
+                                UV 라이트
+                            </button>
+
+                            <button
+                                class="evidence-btn"
+                                data-evidence="고스트 오브"
+                            >
+                                고스트 오브
+                            </button>
+
+                            <button
+                                class="evidence-btn"
+                                data-evidence="고스트 라이팅"
+                            >
+                                고스트 라이팅
+                            </button>
+
+                            <button
+                                class="evidence-btn"
+                                data-evidence="주파수 측정기"
+                            >
+                                주파수 측정기
+                            </button>
+
+                            <button
+                                class="evidence-btn"
+                                data-evidence="서늘함"
+                            >
+                                서늘함
+                            </button>
+
+                        </div>
+
+
+                        <div class="info-notice">
+                            💡
+                            <strong>팁:</strong>
+                            악몽/광기 난이도에서는
+                            유령 고유 특성(가속, 주파수 측정기 반응,
+                            소금 피적 등)을 추가 필터로 조합하면
+                            정확하게 특정할 수 있습니다.
+                        </div>
+
+                    </div>
+
+
+                    <!-- 유령 결과 -->
+                    <div class="right-panel">
+
+                        <div class="result-header">
+
+                            <div class="result-header-left">
+
+                                <span>
+                                    추론된 유령 목록
+                                </span>
+
+                                <div class="special-filters">
+
+                                    <label class="filter-chip">
+
+                                        <input
+                                            type="checkbox"
+                                            id="filter-accel"
+                                            onchange="toggleFilter('hasAccel')"
+                                        >
+
+                                        <span>
+                                            시야 가속 보유
+                                        </span>
+
+                                    </label>
+
+
+                                    <label class="filter-chip">
+
+                                        <input
+                                            type="checkbox"
+                                            id="filter-special-speed"
+                                            onchange="toggleFilter('hasSpecialSpeed')"
+                                        >
+
+                                        <span>
+                                            특수 이동 속도
+                                        </span>
+
+                                    </label>
+
+
+                                    <label class="filter-chip">
+
+                                        <input
+                                            type="checkbox"
+                                            id="filter-forced-ev"
+                                            onchange="toggleFilter('hasForcedEv')"
+                                        >
+
+                                        <span>
+                                            고정 증거 유령
+                                        </span>
+
+                                    </label>
+
+
+                                    <label class="filter-chip">
+
+                                        <input
+                                            type="checkbox"
+                                            id="filter-target-roam"
+                                            onchange="toggleFilter('hasTargetRoam')"
+                                        >
+
+                                        <span>
+                                            타겟/스토킹 보유
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <span class="count-badge">
+                                남은 유령:
+                                <strong id="ghost-count">
+                                    30
+                                </strong>
+                                종
+                            </span>
+
+                        </div>
+
+
+                        <div id="ghost-list-container"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 탭 2 : 유령 도감
+                 ================================================= -->
+            <section
+                id="tab-ghosts"
+                class="tab-content"
+            >
+
+                <div id="ghost-dictionary-container"></div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 탭 3 : 장비 가이드
+                 ================================================= -->
+            <section
+                id="tab-equipment"
+                class="tab-content"
+            >
+
+                <div id="equipment-container"></div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 탭 4 : 맵 정보
+                 ================================================= -->
+            <section
+                id="tab-maps"
+                class="tab-content"
+            >
+
+                <div id="maps-container"></div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 탭 5 : 주간 도전 과제
+                 ================================================= -->
+            <section
+                id="tab-weekly"
+                class="tab-content"
+            >
+
+                <div id="weekly-container"></div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 탭 6 : 아포칼립스
+                 ================================================= -->
+            <section
+                id="tab-apocalypse"
+                class="tab-content"
+            >
+                <div id="apocalypse-container"></div>
+            </section>
+
+
+
+            <!-- =================================================
+                탭 7 : 레벨업 공장 공략 (신규 추가)
+                ================================================= -->
+            <section
+                id="tab-factory"
+                class="tab-content"
+            >
+                <div id="factory-container"></div>
+            </section>
+
+
+
+            <!-- =================================================
+                 탭 8 : 드롭스
+                 ================================================= -->
+            <section
+                id="tab-drops"
+                class="tab-content"
+            >
+
+                <div
+                    id="drops-container"
+                    class="guide-grid"
+                ></div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 탭 9 : 핵심 공략
+                 ================================================= -->
+            <section
+                id="tab-guide"
+                class="tab-content"
+            >
+
+                <div
+                    id="guide-container"
+                    class="guide-grid"
+                ></div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 탭 10 : ID 카드 & 배지
+                 ================================================= -->
+            <section
+                id="tab-idcard"
+                class="tab-content"
+            >
+
+                <div
+                    id="idcard-container"
+                    class="guide-grid"
+                ></div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 탭 11 : 패치 소식
+                 ================================================= -->
+            <section
+                id="tab-news"
+                class="tab-content"
+            >
+
+                <div
+                    id="news-container"
+                    class="guide-grid"
+                ></div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         우측 플로팅 퀵 사이드바
+         ========================================================= -->
+    <div class="quick-sidebar-bar">
+
+        <button
+            class="quick-icon-btn search-btn"
+            onclick="toggleQuickPanel('search')"
+            title="퀵 검색"
+        >
+            🔍
+        </button>
+
+        <button
+            class="quick-icon-btn"
+            onclick="toggleQuickPanel('news')"
+            title="공지사항"
+        >
+            📢
+        </button>
+
+        <button
+            class="quick-icon-btn"
+            onclick="toggleQuickPanel('stream')"
+            title="방송 안내"
+        >
+            📺
+        </button>
+
+        <button
+            class="quick-icon-btn"
+            onclick="toggleQuickPanel('contact')"
+            title="문의/제보"
+        >
+            ✉️
+        </button>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         우측 슬라이드 패널
+         ========================================================= -->
+    <div
+        id="quick-slide-panel"
+        class="quick-slide-panel"
+    >
+
+        <div class="panel-header">
+
+            <h3 id="quick-panel-title">
+                정보 패널
+            </h3>
+
+            <button
+                class="close-btn"
+                onclick="closeQuickPanel()"
+            >
+                ✕
+            </button>
+
+        </div>
+
+        <div
+            id="quick-panel-content"
+            class="panel-content"
+        ></div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         하단 푸터
+         ========================================================= -->
+    <footer>
+
+        <div class="visitor-counter-box">
+
+            <span>
+                👀 오늘 방문자:
+                <strong id="today-visitors" class="visitor-today">
+                    집계 중...
+                </strong>
+            </span>
+
+
+            <span class="visitor-separator">
+                |
+            </span>
+
+
+            <span>
+                🔥 총 방문자:
+                <strong id="total-visitors" class="visitor-total">
+                    집계 중...
+                </strong>
+            </span>
+
+        </div>
+
+
+        <p>
+            © 2026 뇽스모
+            (Nyong-ja Phasmophobia Guide).
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         카테고리 데이터베이스
+         ========================================================= -->
+
+    <script src="js/data-ghosts.js"></script>
+    <script src="js/data-equipment.js"></script>
+    <script src="js/data-maps.js"></script>
+    <script src="js/data-weekly.js"></script>
+    <script src="js/data-apocalypse.js"></script>
+    <script src="js/data-factory.js"></script>
+    <script src="js/data-drops.js"></script>
+    <script src="js/data-guides.js"></script>
+    <script src="js/data-idcards.js"></script>
+    <script src="js/data-news.js"></script>
+
+
+
+    <!-- =========================================================
+         개별 탭 제어
+         ========================================================= -->
+
+    <script src="js/tab-evidence.js"></script>
+    <script src="js/tab-dictionary.js"></script>
+
+
+
+    <!-- =========================================================
+         메인 진입점
+         ========================================================= -->
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
