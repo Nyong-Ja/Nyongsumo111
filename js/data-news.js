@@ -23,7 +23,7 @@ const NEWS_DATA = [
                 <div class="news-sub-title">2. 가장 중요한 변경 사항</div>
                 <ul style="padding-left: 20px; margin-bottom: 10px;">
                     <li><strong>VR 벨트 오프셋 옵션 추가:</strong> VR 벨트의 높이를 원하는 위치로 조절할 수 있습니다.</li>
-                    <li><strong>감옥 제한 구역 신규 상호작용 추가:</strong> 입구에 소품과 상호작용 요소가 추가되어 유령 식별에 도움을 줄 수 있도록 개선되었습니다.</li>
+                    <li><strong>감옥 제한 구역 신규 상호작용 추가:</strong> 입구에 소품과 지문 상호작용이 추가되어 유령 식별에 도움을 줄 수 있도록 개선되었습니다.</li>
                     <li><strong>VR 손 위치 개선:</strong> 1티어 DOTS, 모든 티어 손전등, 모든 티어 사진기, 모든 티어 비디오 카메라의 손 위치가 개선되었습니다. 추후 다른 장비에도 추가 개선이 예정되어 있습니다.</li>
                 </ul>
             </div>
@@ -31,7 +31,7 @@ const NEWS_DATA = [
             <div class="news-section-box">
                 <div class="news-sub-title">3. 주요 버그 수정 (GAMEPLAY)</div>
                 <ul style="padding-left: 20px; margin-bottom: 10px;">
-                    <li>0배 커스텀 난이도에서 업적이 완료되지만 보상을 받지 못하던 문제를 수정했습니다.</li>
+                    <li>0배 커스텀 난이도에서 업적이 지급되지 않던 문제를 수정했습니다.</li>
                     <li><strong>넬의 식당 금고에 올바른 코드를 입력해도 열리지 않던 문제를 수정했습니다.</strong></li>
                     <li><strong>컨트롤러 사용 시 커스텀 난이도에서 유령을 선택하려면 더블 클릭해야 했던 문제를 수정했습니다.</strong></li>
                     <li><strong>T1 사진기 사용 애니메이션 중 장비를 교체하거나 떨어뜨리면 캐릭터 애니메이션이 깨지던 문제를 수정했습니다.</strong></li>
@@ -39,7 +39,7 @@ const NEWS_DATA = [
                     <li>위자 보드 답변 중 저널을 열면 애니메이션 및 상호작용이 끊기던 문제를 수정했습니다.</li>
                     <li>감옥에서 <strong>은신처 없음</strong> 설정이 제대로 적용되지 않던 문제를 수정했습니다.</li>
                     <li>감옥에서 퓨즈가 접근 불가능한 위치에 생성되던 문제를 수정했습니다.</li>
-                    <li>감옥에서 원숭이 손이 잘못된 위치에 스폰되던 문제를 수정했습니다.</li>
+                    <li>감옥에서 원숭이 손이 잘못된 위치에 생성되던 문제를 수정했습니다.</li>
                     <li>신규 제한 구역의 특정 장애물에 장비를 놓으면 사라지던 문제를 수정했습니다.</li>
                     <li><strong>해커가 증거 및 금전 보상 수치를 변경할 수 있던 문제를 수정했습니다.</strong></li>
                 </ul>
@@ -60,7 +60,7 @@ const NEWS_DATA = [
                 <div class="news-sub-title">5. 유령 / 상호작용 수정</div>
                 <ul style="padding-left: 20px; margin-bottom: 10px;">
                     <li>유령이 문을 닫을 때 문 소리가 제대로 재생되지 않던 문제를 수정했습니다.</li>
-                    <li>Firelight를 들고 있으면 점화기가 꺼지던 문제를 수정했습니다.</li>
+                    <li>라이타를 집으면 점화기가 꺼지던 문제를 수정했습니다.</li>
                     <li>감옥 제한 구역에서 잘못된 뼈가 생성되던 문제를 수정했습니다.</li>
                     <li>포인트 호프 폴라로이드에서 잘못된 방이 차단된 것처럼 표시되던 문제를 수정했습니다.</li>
                     <li>저널을 닫아도 증거 강조 표시가 남아있던 문제를 수정했습니다.</li>
@@ -68,11 +68,11 @@ const NEWS_DATA = [
             </div>
 
             <div class="news-section-box">
-                <div class="news-sub-title">6. 캐릭터 / 의장 수정</div>
+                <div class="news-sub-title">6. 캐릭터 / 의상 수정</div>
                 <ul style="padding-left: 20px; margin-bottom: 10px;">
-                    <li>선택한 캐릭터/의장과 관계없이 <strong>아미르 켈리 기본 외형으로 생성되는 문제</strong>를 수정했습니다.</li>
+                    <li>선택한 캐릭터/의상과 관계없이 <strong>아미르 켈리 기본 외형으로 생성되는 문제</strong>를 수정했습니다.</li>
                     <li>일부 의장이 시계를 가리던 문제를 수정했습니다. 단, <strong>여성용 후드 데님 외투는 아직 시계를 살짝 가립니다.</strong></li>
-                    <li>여성 캐릭터 재킷에 의장 장착 시 틈이 생기는 문제를 수정했습니다.</li>
+                    <li>여성 캐릭터 재킷에 의상 장착 시 틈이 생기는 문제를 수정했습니다.</li>
                     <li>VR 플레이어 프로필 사진이 로비에서 비어 보이던 문제를 수정했습니다.</li>
                     <li><strong>사망할 때 저널을 여는 효과음이 재생되던 문제를 수정했습니다.</strong></li>
                     <li><strong>로비에서 플레이어 ID 카드가 중복 표시되던 문제를 수정했습니다.</strong></li>
@@ -95,7 +95,7 @@ const NEWS_DATA = [
                     <li>PSVR2 UI 포인터 방향 문제를 수정했습니다.</li>
                     <li>PSVR2에서 플레이어가 플레이 공간 중앙에서 움직이지 않던 문제를 수정했습니다.</li>
                     <li>VR 몰입형 애니메이션 사용 시 사망한 캐릭터가 뒤틀리는 문제를 수정했습니다.</li>
-                    <li>멀티플레이에서 마이크를 켜자마자 떨어뜨리면 오디오가 뭉개지던 문제를 수정했습니다.</li>
+                    <li>멀티플레이에서 마이크로폰를 켜자마자 떨어뜨리면 다른 플레이어의 음성이 먹먹해지던 문제를 수정했습니다.</li>
                     <li>가까운 곳에서 다른 플레이어가 문을 닫을 경우 VR 헤드기어가 떨어질 수 있던 문제를 수정했습니다.</li>
                     <li>PC/VR 플레이어가 같은 문과 상호작용할 때 헤드기어 소유권이 바뀌던 문제를 수정했습니다.</li>
                 </ul>
@@ -106,10 +106,10 @@ const NEWS_DATA = [
                 <ul style="padding-left: 20px; margin-top: 4px;">
                     <li>비디오 카메라 증거의 <strong>번역문이 비영어권에서 제대로 표시되지 않을 수 있습니다.</strong></li>
                     <li><strong>FSR 1.0 사용 시 저널 가독성 문제가 발생합니다.</strong></li>
-                    <li>불이 붙은 Firelight를 들고 있을 때 배치된 1티어 Firelight를 켤 수 없습니다.</li>
-                    <li>Firelight를 인벤토리로 전환한 뒤 던져도 불이 꺼지지 않습니다.</li>
+                    <li>불이 붙은 라이타를 들고 있을 때 배치된 1티어 라이타를 켤 수 없습니다.</li>
+                    <li>양초를 인벤토리에 넣었다가 던져도 불이 꺼지지 않습니다.</li>
                     <li>로비 붐박스가 항상 켜지지 않을 수 있습니다.</li>
-                    <li>제한 구역의 신규 장애물 뒤에 숨을 수 있어 의도하지 않은 새로운 은신처가 생길 수 있습니다.</li>
+                    <li>제한 구역의 신규 장애물 뒤에 숨을 수 있어 의도하지 않은 새로운 은신처가 생성될 수 있습니다.</li>
                     <li>VR 1티어 DOTS 사용 시 캐릭터 손 애니메이션이 부자연스럽게 회전할 수 있습니다.</li>
                     <li><strong>PS5 / Xbox Series X|S 충돌 문제가 남아있습니다.</strong></li>
                 </ul>
@@ -121,7 +121,7 @@ const NEWS_DATA = [
                 <ul style="padding-left: 20px; margin-top: 6px;">
                     <li>기존 예정: 10월</li>
                     <li><strong>변경: 11월 출시 예정</strong></li>
-                    <li>Unity 6 전환과 함께 의장 업데이트에 대해서도 개발 미리보기에서 추가 공개될 예정입니다.</li>
+                    <li>Unity 6 전환과 함께 의상 업데이트에 대해서도 개발 미리보기에서 추가 공개될 예정입니다.</li>
                 </ul>
                 <p style="margin-top: 12px;"><strong>👁️ 진홍의 눈 이벤트</strong></p>
                 <ul style="padding-left: 20px; margin-top: 6px;">
