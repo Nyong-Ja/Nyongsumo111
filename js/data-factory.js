@@ -66,32 +66,22 @@ function renderFactory() {
                 </div>
 
                 <div style="display: flex; flex-direction: column; gap: 10px;">
-                    <a href="https://youtu.be/jN_0MlvYjRA" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 12px; background: rgba(255, 0, 0, 0.1); border: 1.5px solid rgba(255, 0, 0, 0.3); padding: 16px; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">
-                        <div style="background: #ff0000; color: #fff; width: 44px; height: 44px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
-                            ▶
+                    <a href="https://youtu.be/jN_0MlvYjRA" target="_blank" rel="noopener noreferrer" class="weekly-yt-banner-btn">
+                        <span class="yt-banner-icon">🏆</span>
+                        <div class="yt-banner-textbox">
+                            <div class="yt-banner-title">모든 공장맵 티어표 & 공략</div>
+                            <div class="yt-banner-sub">1분당 경험치 2,700까지! 공장맵 세팅과 티어를 한눈에 확인하세요.</div>
                         </div>
-                        <div>
-                            <div style="font-weight: 600; color: var(--text-primary); font-size: 0.98rem; margin-bottom: 3px;">
-                                🏆 모든 공장맵 티어표 & 공략
-                            </div>
-                            <div style="font-size: 0.85rem; color: var(--text-secondary);">
-                                1분당 경험치 2,700까지! 공장맵 세팅과 티어를 한눈에 확인하세요.
-                            </div>
-                        </div>
+                        <span class="yt-banner-arrow">영상 보기 ➜</span>
                     </a>
 
-                    <a href="https://youtu.be/8XDH6niXRIw" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 12px; background: rgba(255, 0, 0, 0.1); border: 1.5px solid rgba(255, 0, 0, 0.3); padding: 16px; border-radius: 10px; text-decoration: none; transition: all 0.2s ease;">
-                        <div style="background: #ff0000; color: #fff; width: 44px; height: 44px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
-                            ▶
+                    <a href="https://youtu.be/8XDH6niXRIw" target="_blank" rel="noopener noreferrer" class="weekly-yt-banner-btn">
+                        <span class="yt-banner-icon">🗼</span>
+                        <div class="yt-banner-textbox">
+                            <div class="yt-banner-title">등대맵 신규 공장 공략</div>
+                            <div class="yt-banner-sub">2분당 경험치 2,700! 새로 나온 등대맵에서 레벨업하는 방법을 확인하세요.</div>
                         </div>
-                        <div>
-                            <div style="font-weight: 600; color: var(--text-primary); font-size: 0.98rem; margin-bottom: 3px;">
-                                🗼 등대맵 신규 공장 공략
-                            </div>
-                            <div style="font-size: 0.85rem; color: var(--text-secondary);">
-                                2분당 경험치 2,700! 새로 나온 등대맵에서 레벨업하는 방법을 확인하세요.
-                            </div>
-                        </div>
+                        <span class="yt-banner-arrow">영상 보기 ➜</span>
                     </a>
                 </div>
             </div>
