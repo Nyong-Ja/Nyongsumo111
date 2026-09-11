@@ -7,6 +7,137 @@ const NEWS_DATA = [
     {
         category: "Phasmophobia",
         icon: "👻",
+        date: "2026. 9. 10.",
+        title: "파스모포비아 v0.19.0.1 - 패치 노트",
+        desc: "최근 삶의 질(QoL) 업데이트 이후 발생한 주요 버그 수정 및 VR·감옥 제한 구역 개선",
+        img: "https://kineticgames.co.uk/assets/images/news-banner-qol-part2.webp",
+        url: "https://www.kineticgames.co.uk/news/phasmophobia-v01901-patch-notes",
+        detailedHtml: `
+            <div class="news-section-box">
+                <div class="news-sub-title">1. 업데이트 개요 (OVERVIEW)</div>
+                <p>2026년 9월 10일 적용된 v0.19.0.1 업데이트는 최근 삶의 질(QoL) 업데이트 이후 발생한 여러 문제를 해결하는 데 초점을 맞췄습니다.</p>
+                <p style="margin-top: 8px;">이번 패치에서는 VR 조작 개선, 감옥 제한 구역의 신규 상호작용, 카메라 및 장비 관련 문제, 캐릭터·맵·콘솔·VR 버그 등이 수정되었습니다.</p>
+            </div>
+
+            <div class="news-section-box">
+                <div class="news-sub-title">2. 가장 중요한 변경 사항</div>
+                <ul style="padding-left: 20px; margin-bottom: 10px;">
+                    <li><strong>VR 벨트 오프셋 옵션 추가:</strong> VR 벨트의 높이를 원하는 위치로 조절할 수 있습니다.</li>
+                    <li><strong>감옥 제한 구역 신규 상호작용 추가:</strong> 입구에 소품과 상호작용 요소가 추가되어 유령 식별에 도움을 줄 수 있도록 개선되었습니다.</li>
+                    <li><strong>VR 손 위치 개선:</strong> 1티어 DOTS, 모든 티어 손전등, 모든 티어 사진기, 모든 티어 비디오 카메라의 손 위치가 개선되었습니다. 추후 다른 장비에도 추가 개선이 예정되어 있습니다.</li>
+                </ul>
+            </div>
+
+            <div class="news-section-box">
+                <div class="news-sub-title">3. 주요 버그 수정 (GAMEPLAY)</div>
+                <ul style="padding-left: 20px; margin-bottom: 10px;">
+                    <li>0배 커스텀 난이도에서 업적이 완료되지만 보상을 받지 못하던 문제를 수정했습니다.</li>
+                    <li><strong>넬의 식당 금고에 올바른 코드를 입력해도 열리지 않던 문제를 수정했습니다.</strong></li>
+                    <li><strong>컨트롤러 사용 시 커스텀 난이도에서 유령을 선택하려면 더블 클릭해야 했던 문제를 수정했습니다.</strong></li>
+                    <li><strong>T1 사진기 사용 애니메이션 중 장비를 교체하거나 떨어뜨리면 캐릭터 애니메이션이 깨지던 문제를 수정했습니다.</strong></li>
+                    <li>원숭이 손의 「정보가 필요해」 소원 사용 시 올바른 증거가 삭제되던 문제를 수정했습니다.</li>
+                    <li>위자 보드 답변 중 저널을 열면 애니메이션 및 상호작용이 끊기던 문제를 수정했습니다.</li>
+                    <li>감옥에서 <strong>은신처 없음</strong> 설정이 제대로 적용되지 않던 문제를 수정했습니다.</li>
+                    <li>감옥에서 퓨즈가 접근 불가능한 위치에 생성되던 문제를 수정했습니다.</li>
+                    <li>감옥에서 원숭이 손이 잘못된 위치에 스폰되던 문제를 수정했습니다.</li>
+                    <li>신규 제한 구역의 특정 장애물에 장비를 놓으면 사라지던 문제를 수정했습니다.</li>
+                    <li><strong>해커가 증거 및 금전 보상 수치를 변경할 수 있던 문제를 수정했습니다.</strong></li>
+                </ul>
+            </div>
+
+            <div class="news-section-box">
+                <div class="news-sub-title">4. 카메라 / 사진 수정</div>
+                <ul style="padding-left: 20px; margin-bottom: 10px;">
+                    <li>다른 플레이어가 설치한 삼각대 비디오 카메라를 가져갈 수 없던 문제를 수정했습니다.</li>
+                    <li>트럭에서 문이 열리기 전에 카메라를 집으면 화면이 계속 검게 나오던 문제를 수정했습니다.</li>
+                    <li>헤드기어 토글 이후 비디오 카메라가 검게 나오던 문제를 수정했습니다.</li>
+                    <li>카메라가 벽 안에 있을 때 저널을 열면 화면이 검게 유지되던 문제를 수정했습니다.</li>
+                    <li><strong>윌로우 스트리트 13번지 / 넬의 식당에서 UV 지문 사진을 찍을 수 없던 문제를 수정했습니다.</strong></li>
+                </ul>
+            </div>
+
+            <div class="news-section-box">
+                <div class="news-sub-title">5. 유령 / 상호작용 수정</div>
+                <ul style="padding-left: 20px; margin-bottom: 10px;">
+                    <li>유령이 문을 닫을 때 문 소리가 제대로 재생되지 않던 문제를 수정했습니다.</li>
+                    <li>Firelight를 들고 있으면 점화기가 꺼지던 문제를 수정했습니다.</li>
+                    <li>감옥 제한 구역에서 잘못된 뼈가 생성되던 문제를 수정했습니다.</li>
+                    <li>포인트 호프 폴라로이드에서 잘못된 방이 차단된 것처럼 표시되던 문제를 수정했습니다.</li>
+                    <li>저널을 닫아도 증거 강조 표시가 남아있던 문제를 수정했습니다.</li>
+                </ul>
+            </div>
+
+            <div class="news-section-box">
+                <div class="news-sub-title">6. 캐릭터 / 의장 수정</div>
+                <ul style="padding-left: 20px; margin-bottom: 10px;">
+                    <li>선택한 캐릭터/의장과 관계없이 <strong>아미르 켈리 기본 외형으로 생성되는 문제</strong>를 수정했습니다.</li>
+                    <li>일부 의장이 시계를 가리던 문제를 수정했습니다. 단, <strong>여성용 후드 데님 외투는 아직 시계를 살짝 가립니다.</strong></li>
+                    <li>여성 캐릭터 재킷에 의장 장착 시 틈이 생기는 문제를 수정했습니다.</li>
+                    <li>VR 플레이어 프로필 사진이 로비에서 비어 보이던 문제를 수정했습니다.</li>
+                    <li><strong>사망할 때 저널을 여는 효과음이 재생되던 문제를 수정했습니다.</strong></li>
+                    <li><strong>로비에서 플레이어 ID 카드가 중복 표시되던 문제를 수정했습니다.</strong></li>
+                </ul>
+            </div>
+
+            <div class="news-section-box">
+                <div class="news-sub-title">7. 맵 / 성능 수정</div>
+                <ul style="padding-left: 20px; margin-bottom: 10px;">
+                    <li>브라운스톤 고등학교 6번 교실 의자에 끼이는 문제를 수정했습니다.</li>
+                    <li>고등학교 제한 구역의 성능 저하 문제를 수정했습니다.</li>
+                    <li>포인트 호프 일부 바닥이 하얗게 보이는 문제를 수정했습니다.</li>
+                </ul>
+            </div>
+
+            <div class="news-section-box">
+                <div class="news-sub-title">8. 콘솔 / VR 수정</div>
+                <ul style="padding-left: 20px; margin-bottom: 10px;">
+                    <li>PS5/Xbox에서 <strong>음성 → 텍스트 → 음성 전환 후 음성 인식이 작동하지 않던 문제</strong>를 수정했습니다.</li>
+                    <li>PSVR2 UI 포인터 방향 문제를 수정했습니다.</li>
+                    <li>PSVR2에서 플레이어가 플레이 공간 중앙에서 움직이지 않던 문제를 수정했습니다.</li>
+                    <li>VR 몰입형 애니메이션 사용 시 사망한 캐릭터가 뒤틀리는 문제를 수정했습니다.</li>
+                    <li>멀티플레이에서 마이크를 켜자마자 떨어뜨리면 오디오가 뭉개지던 문제를 수정했습니다.</li>
+                    <li>가까운 곳에서 다른 플레이어가 문을 닫을 경우 VR 헤드기어가 떨어질 수 있던 문제를 수정했습니다.</li>
+                    <li>PC/VR 플레이어가 같은 문과 상호작용할 때 헤드기어 소유권이 바뀌던 문제를 수정했습니다.</li>
+                </ul>
+            </div>
+
+            <div class="news-section-box" style="margin-top: 14px;">
+                <div class="news-sub-title">9. 알려진 문제 (KNOWN ISSUES)</div>
+                <ul style="padding-left: 20px; margin-top: 4px;">
+                    <li>비디오 카메라 증거의 <strong>번역문이 비영어권에서 제대로 표시되지 않을 수 있습니다.</strong></li>
+                    <li><strong>FSR 1.0 사용 시 저널 가독성 문제가 발생합니다.</strong></li>
+                    <li>불이 붙은 Firelight를 들고 있을 때 배치된 1티어 Firelight를 켤 수 없습니다.</li>
+                    <li>Firelight를 인벤토리로 전환한 뒤 던져도 불이 꺼지지 않습니다.</li>
+                    <li>로비 붐박스가 항상 켜지지 않을 수 있습니다.</li>
+                    <li>제한 구역의 신규 장애물 뒤에 숨을 수 있어 의도하지 않은 새로운 은신처가 생길 수 있습니다.</li>
+                    <li>VR 1티어 DOTS 사용 시 캐릭터 손 애니메이션이 부자연스럽게 회전할 수 있습니다.</li>
+                    <li><strong>PS5 / Xbox Series X|S 충돌 문제가 남아있습니다.</strong></li>
+                </ul>
+            </div>
+
+            <div class="news-section-box" style="margin-top: 14px;">
+                <div class="news-sub-title">10. 앞으로의 일정</div>
+                <p><strong>🔴 다음 대형 업데이트 = Unity 6</strong></p>
+                <ul style="padding-left: 20px; margin-top: 6px;">
+                    <li>기존 예정: 10월</li>
+                    <li><strong>변경: 11월 출시 예정</strong></li>
+                    <li>Unity 6 전환과 함께 의장 업데이트에 대해서도 개발 미리보기에서 추가 공개될 예정입니다.</li>
+                </ul>
+                <p style="margin-top: 12px;"><strong>👁️ 진홍의 눈 이벤트</strong></p>
+                <ul style="padding-left: 20px; margin-top: 6px;">
+                    <li><strong>10월 예정 그대로 유지</strong></li>
+                    <li>Unity 6 업데이트가 11월로 밀렸지만 진홍의 눈 이벤트 일정에는 영향이 없습니다.</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 20px; padding-top: 12px; border-top: 1px dashed var(--card-border); text-align: right; font-size: 0.88rem; color: var(--accent-light);">
+                ✨ <strong>Korean Translated by. 흠먐먀</strong>
+            </div>
+        `
+    },
+    {
+        category: "Phasmophobia",
+        icon: "👻",
         date: "2026. 8. 25.",
         title: "파스모포비아 v0.19.0.0 - 플레이 개선 업데이트 파트2",
         desc: "감옥, 고등학교 등 신규 제한구역 맵 3종 추가 및 비디오·사진 카메라 중복 증거 표시 기능 도입",
